@@ -3,7 +3,7 @@ class App.Metrics
   @repoEffectivenessIcon = (repo) ->
     rating = @repoEffectiveness(repo)
     return "fa-frown-o"  if rating >= 0 and rating < 3
-    return "fa-meh-o"  if rating >= 3 and rating < 4.5
+    return "fa-meh-o"    if rating >= 3 and rating < 4.5
     return "fa-smile-o"  if rating >= 4.5 and rating < 7
     return "fa-smile-o green-glow"  if rating >= 7 and rating <= 10
     throw new RangeError "Rating was #{rating}, but must be between 0 and 10"
